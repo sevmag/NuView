@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "icecube-event-viewer"
+version = "0.1.0"
+description = "Interactive 3-D IceCube event visualisation with Plotly"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "plotly>=5.0",
+]
+
+[project.optional-dependencies]
+export = ["kaleido"]  # needed for PNG/PDF/SVG export
+
+[tool.hatch.build.targets.wheel]
+packages = ["icecube_event_viewer"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"icecube_event_viewer/data/sensor_geometry.csv" = "icecube_event_viewer/data/sensor_geometry.csv"
