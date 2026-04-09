@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "icecube-event-viewer"
+name = "nuview"
 version = "0.1.0"
 description = "Interactive 3-D IceCube event visualisation with Plotly"
 requires-python = ">=3.10"
@@ -17,7 +17,7 @@ dependencies = [
 export = ["kaleido"]  # needed for PNG/PDF/SVG export
 
 [tool.hatch.build.targets.wheel]
-packages = ["icecube_event_viewer"]
+packages = ["nuview"]
 
 [tool.hatch.build.targets.wheel.force-include]
-"icecube_event_viewer/data/sensor_geometry.csv" = "icecube_event_viewer/data/sensor_geometry.csv"
+"nuview/data/sensor_geometry.csv" = "nuview/data/sensor_geometry.csv"

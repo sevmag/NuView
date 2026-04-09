@@ -5,7 +5,7 @@ import pandas as pd
 import plotly.graph_objects as go
 
 
-_DEFAULT_GEOMETRY_PATH = files("icecube_event_viewer.data").joinpath("sensor_geometry.csv")
+_DEFAULT_GEOMETRY_PATH = files("nuview.data").joinpath("sensor_geometry.csv")
 
 
 def load_geometry(
